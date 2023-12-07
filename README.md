@@ -8,6 +8,7 @@ L'API Gateway agit en tant que point d'entrée centralisé, simplifiant la gesti
 Le serveur de découverte Eureka revêt un rôle crucial en permettant à chaque microservice de s'enregistrer de manière dynamique, 
 formant ainsi un annuaire décentralisé des services disponibles.
 #### Architecture appropriée:
+
 > ![archi](https://private-user-images.githubusercontent.com/101459843/288551067-9e92dad0-6f36-4c8c-aaef-fcf218e67fce.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE5NTAyNzgsIm5iZiI6MTcwMTk0OTk3OCwicGF0aCI6Ii8xMDE0NTk4NDMvMjg4NTUxMDY3LTllOTJkYWQwLTZmMzYtNGM4Yy1hYWVmLWZjZjIxOGU2N2ZjZS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMjA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTIwN1QxMTUyNThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04ZGRhY2RlYTdhZjY1OWY5MTcxYTJiNDcwMTgwYmMzZTAyMjhkZjcyMTE3M2IxNTdiZTdiYWQxNjI3ZjdlODkwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.3zcY55SWT38Vf33iKt_3Kg3h9d5y7ZKmiVduui72hos)
 
 
@@ -38,7 +39,7 @@ Client s'affiche dans le tableau d'instances actuellement enregistrées auprès 
 ## Étape 3 : Création d'un Service Gateway
 La mise en place d'une passerelle (Gateway) offre un point d'entrée centralisé pour gérer les requêtes, simplifiant ainsi le routage du trafic vers les microservices appropriés. 
 Le service gateway s'execute sur le port 8889.
-## Illustration
+
 ## Étape 4 : Création du Service Voiture
 Enfin,On ajoute un nouveau service (Service Voiture). Ce service gère les informations liées aux voitures et communique de manière synchrone avec d'autres services, notamment le service client, via l'outil OpenFeign.
 Les données sont stockées dans une base de données MySQL pour assurer la cohérence entre les microservices.
