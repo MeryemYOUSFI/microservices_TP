@@ -16,6 +16,8 @@ Dans cette première étape, on crée un service de découverte Eureka, qui joue
 formant ainsi un annuaire décentralisé des services disponibles. En exécutant le projet Eureka_Server, assurez-vous d'obtenir sur le port 8761 dans votre machine la meme chose que l'image illustrative:
 ## Illustration
 
+<img width="959" alt="CaptureServeur" src="https://github.com/MeryemYOUSFI/microservices_TP/assets/101459843/201c836c-d590-46ea-8196-0c66ff64f629">
+
 ## Étape 2 : Création du Service Client
 On mis en place un service client, intégré avec Eureka, permettant l'enregistrement et la récupération de données depuis une base de données MySQL. 
 L'utilisation de Spring Boot Actuator, Eureka Discovery Client, et l'outil OpenFeign facilite la communication entre les microservices. Et donc une fois on l'execute, on voit notre service
@@ -31,6 +33,8 @@ Client s'affiche dans le tableau d'instances actuellement enregistrées auprès 
   - **Exemple d'utilisation :** `/clients`
 ## Illustration
 
+<img width="960" alt="captureClient" src="https://github.com/MeryemYOUSFI/microservices_TP/assets/101459843/1409c221-dfac-4825-826f-efd9d7ef458c">
+
 ## Étape 3 : Création d'un Service Gateway
 La mise en place d'une passerelle (Gateway) offre un point d'entrée centralisé pour gérer les requêtes, simplifiant ainsi le routage du trafic vers les microservices appropriés. 
 Le service gateway s'execute sur le port 8889.
@@ -43,6 +47,9 @@ Les données sont stockées dans une base de données MySQL pour assurer la coh�
 - **Description :** Récupère la liste de toutes les voitures.
 - **Exemple d'utilisation :** `/voitures`
 ## Illustration
+
+<img width="960" alt="CaptureVoture" src="https://github.com/MeryemYOUSFI/microservices_TP/assets/101459843/108b6b06-1001-478b-9661-409304e1cda0">
+
 ### Chercher les Voitures
 - **Endpoint :** `GET /voitures/{Id}`
 - **Description :** Récupère les détails d'une voiture en spécifiant son ID.
