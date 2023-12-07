@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 06 déc. 2023 à 21:14
+-- Généré le : jeu. 07 déc. 2023 à 11:45
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `microservices`
+-- Base de données : `service_client`
 --
 
 -- --------------------------------------------------------
@@ -42,37 +42,6 @@ INSERT INTO `client` (`id`, `age`, `nom`) VALUES
 (2, 22, 'YOUSFI DOUAE'),
 (3, 22, 'YOUSFI DOHA');
 
--- --------------------------------------------------------
-
---
--- Structure de la table `client_seq`
---
-
-CREATE TABLE `client_seq` (
-  `next_val` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `client_seq`
---
-
-INSERT INTO `client_seq` (`next_val`) VALUES
-(1);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `voiture`
---
-
-CREATE TABLE `voiture` (
-  `id` bigint(20) NOT NULL,
-  `marque` varchar(255) DEFAULT NULL,
-  `matricule` varchar(255) DEFAULT NULL,
-  `model` varchar(255) DEFAULT NULL,
-  `id_client` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 --
 -- Index pour les tables déchargées
 --
@@ -84,13 +53,6 @@ ALTER TABLE `client`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `voiture`
---
-ALTER TABLE `voiture`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FKrsw89lx2cfms1lpqxlk8voqc0` (`id_client`);
-
---
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -99,22 +61,6 @@ ALTER TABLE `voiture`
 --
 ALTER TABLE `client`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT pour la table `voiture`
---
-ALTER TABLE `voiture`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `voiture`
---
-ALTER TABLE `voiture`
-  ADD CONSTRAINT `FKrsw89lx2cfms1lpqxlk8voqc0` FOREIGN KEY (`id_client`) REFERENCES `client` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
