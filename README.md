@@ -7,10 +7,15 @@ Au cœur de cette structure se situent les microservices clients, des entités a
 L'API Gateway agit en tant que point d'entrée centralisé, simplifiant la gestion des requêtes en dirigeant le trafic vers les microservices appropriés. 
 Le serveur de découverte Eureka revêt un rôle crucial en permettant à chaque microservice de s'enregistrer de manière dynamique, 
 formant ainsi un annuaire décentralisé des services disponibles.
+#### Architecture appropriée:
+> ![archi](https://private-user-images.githubusercontent.com/101459843/288551067-9e92dad0-6f36-4c8c-aaef-fcf218e67fce.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE5NTAyNzgsIm5iZiI6MTcwMTk0OTk3OCwicGF0aCI6Ii8xMDE0NTk4NDMvMjg4NTUxMDY3LTllOTJkYWQwLTZmMzYtNGM4Yy1hYWVmLWZjZjIxOGU2N2ZjZS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMjA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTIwN1QxMTUyNThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04ZGRhY2RlYTdhZjY1OWY5MTcxYTJiNDcwMTgwYmMzZTAyMjhkZjcyMTE3M2IxNTdiZTdiYWQxNjI3ZjdlODkwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.3zcY55SWT38Vf33iKt_3Kg3h9d5y7ZKmiVduui72hos)
+
+
 ## Étape 1 : Création du Service Discovery Eureka
 Dans cette première étape, on crée un service de découverte Eureka, qui joue un rôle essentiel dans l'architecture microservices en permettant à chaque service de s'enregistrer dynamiquement, 
 formant ainsi un annuaire décentralisé des services disponibles. En exécutant le projet Eureka_Server, assurez-vous d'obtenir sur le port 8761 dans votre machine la meme chose que l'image illustrative:
 ## Illustration
+
 ## Étape 2 : Création du Service Client
 On mis en place un service client, intégré avec Eureka, permettant l'enregistrement et la récupération de données depuis une base de données MySQL. 
 L'utilisation de Spring Boot Actuator, Eureka Discovery Client, et l'outil OpenFeign facilite la communication entre les microservices. Et donc une fois on l'execute, on voit notre service
